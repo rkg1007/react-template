@@ -5,9 +5,9 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.jsx', ".ts", '.js'],
   },
-  entry: "./src/index.tsx",
+  entry: path.resolve(__dirname, "..", "src/index.tsx"),
   output: {
-    path: path.join(__dirname, "build"),
+    path: path.resolve(__dirname, "..", "build"),
     filename: "bundle.js"
   },
   module: {
@@ -32,6 +32,6 @@ module.exports = {
     ]
   },
   plugins: [new HtmlWebpackPlugin({
-    template: path.join(__dirname, "src/index.html")
+    template: path.resolve(__dirname, "..", "src/index.html")
   })],
 }
